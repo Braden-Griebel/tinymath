@@ -64,13 +64,13 @@ double tinyrand_next_double(tinyrand_rng *rng) {
 }
 
 // Create a new empty RNG struct
-tinyrand_rng new_rng(void) {
+tinyrand_rng tinyrand_new_rng(void) {
   tinyrand_rng new_rng = {.state = {0, 0, 0, 0}};
   return new_rng;
 };
 
 // Create a new seeded RNG struct
-tinyrand_rng new_rng_seeded(uint64_t seed) {
+tinyrand_rng tinyrand_new_rng_seeded(uint64_t seed) {
   tinyrand_rng new_rng = {.state = {0, 0, 0, 0}};
   tinyrand_seed(&new_rng, seed);
 

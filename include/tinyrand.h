@@ -14,7 +14,7 @@ typedef struct {
  *
  * @returns Empty RNG (state is empty, so must be seeded)
  * */
-tinyrand_rng new_rng(void);
+tinyrand_rng tinyrand_new_rng(void);
 
 /*!
  * Create a new seeded RNG object
@@ -23,7 +23,7 @@ tinyrand_rng new_rng(void);
  *
  * @returns A seeded RNG
  * */
-tinyrand_rng new_rng_seeded(uint64_t seed);
+tinyrand_rng tinyrand_new_rng_seeded(uint64_t seed);
 
 /*!
  * Seed the random number generator
