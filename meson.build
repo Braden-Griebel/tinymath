@@ -3,7 +3,7 @@ project('tinymath', 'c', version: '0.0.1', license: 'MIT')
 inc = include_directories('include')
 
 sources = []
-source_files = ['tinyrand.c']
+source_files = ['tinyrand.c', 'tinyarray.c']
 foreach source : source_files
     sources += ['src/' + source]
 endforeach
