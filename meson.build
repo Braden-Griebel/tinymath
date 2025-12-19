@@ -16,7 +16,7 @@ tinymathdep = declare_dependency(link_with: tinymath, include_directories: inc)
 # Testing framework (munit)
 munit = dependency('munit', fallback: ['munit', 'munit_dep'])
 
-tests = {'testrand': 'test_tinyrand.c'}
+tests = {'testrand': 'test_tinyrand.c', 'testarray': 'test_tinyarray.c'}
 foreach test_name, test_file : tests
     e = executable(
         test_name,
