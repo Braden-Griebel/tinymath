@@ -23,3 +23,23 @@ TinymathError tinyarray_resize(TinyArray *array, size_t new_size) {
 
   return TINYMATH_OK;
 }
+
+TinymathError tinyarray_init(TinyArray *array, size_t width) {
+  array->data = NULL;
+  array->length = 0;
+  array->capacity = 0;
+  array->width = width;
+
+  return TINYMATH_OK;
+}
+
+tinyarray_push_type_impl(uint8_t);
+tinyarray_push_type_impl(uint16_t);
+tinyarray_push_type_impl(uint32_t);
+tinyarray_push_type_impl(uint64_t);
+tinyarray_push_type_impl(int8_t);
+tinyarray_push_type_impl(int16_t);
+tinyarray_push_type_impl(int32_t);
+tinyarray_push_type_impl(int64_t);
+tinyarray_push_type_impl(float);
+tinyarray_push_type_impl(double);
